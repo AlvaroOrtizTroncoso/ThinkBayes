@@ -1697,7 +1697,7 @@ class Beta(object):
             pmf = cdf.MakePmf()
             return pmf
 
-        xs = [i / (steps - 1.0) for i in xrange(steps)]
+        xs = [i / (steps - 1.0) for i in range(steps)]
         probs = [self.EvalPdf(x) for x in xs]
         pmf = MakePmfFromDict(dict(zip(xs, probs)), name)
         return pmf
